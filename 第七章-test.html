@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+
+	<body>
+		<div id="testdiv">
+
+		</div>
+	</body>
+	<script>
+	
+		window.onload = function() {
+			test1();
+			test2();
+		}
+
+		function test1(){
+			var para = document.createElement("p");//创建一个元素节点 这里是p元素。
+			var testdiv = document.getElementById("testdiv");//查找到id为testdiv的div
+			testdiv.appendChild(para);//在div里插入一个子节点  语法 parent.appendChild(child);
+			var txt=document.createTextNode("hello world!");//创建一个文本节点； 文本内容为 hello world;
+			para.appendChild(txt);//将文本节点作为子节点插入到新建的para元素节点中；
+		}
+
+		function test2(){
+			var para=document.createElement("p");
+			var testdiv=document.getElementById("testdiv");
+			var txt1=document.createTextNode("This is ");
+			var em=document.createElement("em");
+			var txt2=document.createTextNode("my");
+			em.appendChild(txt2);
+			var txt3=document.createTextNode(" content.");
+			para.appendChild(txt1);
+			para.appendChild(em);
+			para.appendChild(txt3);
+			testdiv.appendChild(para);
+		}
+
+	</script>
+</html>

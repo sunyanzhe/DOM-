@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			function insertParagraph(text){
+				var srt="<p>";
+				srt+=text;
+				srt+="</p>";
+				document.write(srt);
+			}
+		</script>
+	</head>
+	<body>
+		<script>
+			insertParagraph("This is inserted");
+		</script>
+	</body>
+</html>
+<!--document.write的最大缺点是他违背了“行为应该与表现分离”的原则。javascript和html代码混杂在一起是一种很不好的做法-->

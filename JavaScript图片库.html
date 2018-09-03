@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Image Gallery</title>
+		<style>
+			img{
+				display: block;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Snapshots</h1>
+		<ul>
+			<li>
+				<a href="img/pic1.jpg" title="black bag" onclick="showPic(this);return false;">black bag</a>
+			</li>
+			<li>
+				<a href="img/pic2.jpg" title="red bag" onclick="showPic(this);return false;">red bag</a>
+			</li>
+			<li>
+				<a href="img/pic3.jpg" title="brown bag" onclick="showPic(this);return false;">brown bag</a>
+			</li>
+			<li>
+				<a href="img/pic4.jpg" title="yellow bag" onclick="showPic(this);return false;">yellow bag</a>
+			</li>
+		</ul>
+		<img id="placeholder" src="img/pic1.jpg" alt="my image gallerly" />
+		<p id="description">black bag</p>
+		<script>
+			function showPic(whichpic){
+				var source=whichpic.getAttribute("href");
+				var placeholder=document.getElementById("placeholder");
+				placeholder.setAttribute("src",source);
+				var text = whichpic.getAttribute("title");
+				var description=document.getElementById("description");
+				description.childNodes[0].nodeValue= text;
+			}
+			
+		</script>
+	</body>
+</html>

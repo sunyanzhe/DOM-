@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<body>
+	<script>
+		var height="dont\"t ask";
+		//   "\"为转义(escaping); height目前的数据类型为字符串(String);
+		console.log(height);
+		var beatles=Array(4);
+		beatles[0]="John";
+		beatles[1]="Paul";
+		beatles[2]="George";
+//		alert(beatles);
+		var beatles1=["Johon","Paul","George","Ringo"];
+		beatles[3]=beatles1[3];
+		alert(beatles);
+		
+		var lennon=Array();
+		lennon["name"]="Jhon";
+		lennon["year"]=1940;
+		lennon["living"]=false;
+//		lennon[0]=1111;
+		alert(lennon["name"]);
+		
+		var a=["John",1940,true];
+		var b=[];
+		b[0]=a;
+//		alert(b[0][0]+" "+b[0][1]);
+
+//对象
+		var band={};
+		var mm={name:"John",years:1940,living:false};
+		band.vocalist=mm;
+		console.log(band.vocalist);
+//运算符
+		alert("10"+20);
+		//字符串类型 +为拼接；
+		alert(10+20);
+		//数字类型 +为加法;
+//条件判断 if..else..
+  	var myMood="happy";
+  	var yourMood="sad";
+  	if (myMood=yourMood){
+  		alert("we both feel the same.");
+  	}
+	</script>
+	</body>
+</html>

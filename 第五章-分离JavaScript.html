@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<a href="http://www.baidu.com/" class="popup">Baidu</a>
+		<script>
+			window.onload=prepareLinks;
+			
+			function prepareLinks(){
+				if(!document.getElementsByTagName) return false;//判断浏览器是否识别getElementsByTagName()
+				var links=document.getElementsByTagName("a");
+				for (var i=0;i<links.length;i++) {
+					if(links[i].getAttribute("class")=="popup"){
+						links[i].onclick=function(){
+							popUp(this.getAttribute("href"));
+							return false;
+						}                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+					}
+				}
+			}
+			
+			function popUp(linkURL){
+				window.open(linkURL,"pop","width=320,height=480");
+			}
+		</script>
+	</body>
+</html>

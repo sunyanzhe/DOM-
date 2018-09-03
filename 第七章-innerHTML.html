@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<div id="testdiv">
+			<p>This is <em>my</em> content.</p>
+		</div>
+	</body>
+	<script>
+		window.onload=function(){
+			var testdiv=document.getElementById("testdiv");
+			testdiv.innerHTML="<p>I inserted <em>this</em> content.</p>"
+		}
+	</script>
+	<!--innerHTML可以把一大段HTML内容插入网页。它既支持读取，又支持写入。-->
+</html>

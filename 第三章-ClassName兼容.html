@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<ul>
+			<li>Milk</li>
+			<li class="sale">Apple</li>
+			<li class="sale">Banana</li>
+		</ul>
+		<script>
+			function getElementsByClassName(node,classname){
+				if(node.getElementsByClassName){
+					return node.getElementsByClassName(classname);
+				}else{
+					var elems=node.getElementsByTagName("*");
+					var results=new Array();
+					for (var i=0;i<elems.length;i++) {
+						if(elems[i].className.indexOf(classname)!=-1){
+							results[results.length]=elems[i]
+						}
+					}
+					return results;
+				}
+			}
+			var shopping=document.getElementsByTagName("ul")
+			var sales=getElementsByClassName(shopping[0],"sale");
+			alert(sales.length);
+		</script>
+	</body>
+</html>

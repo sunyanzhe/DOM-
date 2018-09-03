@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<h1>Snapshots</h1>
+		<ul>
+			<li>
+				<a href="img/pic1.jpg" title="black bag" onclick="showPic(this);return false;">black bag</a>
+			</li>
+			<li>
+				<a href="img/pic2.jpg" title="red bag" onclick="showPic(this);return false;">red bag</a>
+			</li>
+			<li>
+				<a href="img/pic3.jpg" title="brown bag" onclick="showPic(this);return false;">brown bag</a>
+			</li>
+			<li>
+				<a href="img/pic4.jpg" title="yellow bag" onclick="showPic(this);return false;">yellow bag</a>
+			</li>
+		</ul>
+		<img id="placeholder" src="img/pic1.jpg" alt="my image gallerly" />
+		<p id="description">node</p>
+		<script>
+			function showPic(whichpic){
+				var source = whichpic.getAttribute("href");
+				var placeholder=document.getElementById("placeholder");
+				placeholder.setAttribute("src",source);
+			}
+			//扩展
+			function countBodyChildren(){
+				var body_element=document.getElementsByTagName("body")[0];
+				alert(body_element.childNodes.length);//childNodes 包含这个元素全部子元素的数组 不只有元素节点；
+				alert(body_element.nodeType);//nodeType显示该节点的属性类型；1代表元素节点；2代表属性节点；3代表文本节点
+			}
+			window.onload=countBodyChildren();
+			alert(document.getElementById("description").nodeValue);//nodeValue获取或设置一个节点的值；
+		</script>
+	</body>
+</html>

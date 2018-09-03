@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Shopping list</title>
+	</head>
+	<body>
+		<h1>What to buy</h1>
+		<p title="a gentle reminder">Don't forget to buy this stuff.</p>
+		<ul id="purchases">
+			<li>A tin of beans</li>
+			<li class="sale">Cheese</li>
+			<li class="sale important">Milk</li>
+		</ul>
+		<script>
+			alert(typeof document.getElementById("purchases"));
+			alert(document.getElementsByTagName("li").length);
+			for(var i=0;i<document.getElementsByTagName("li").length;i++){
+				alert(typeof(document.getElementsByTagName("li")[i]));
+			}
+			alert(document.getElementsByTagName("*").length);//整个文档有多少个元素节点，*号为通配符返回包含整个文档全部元素的数组
+			var shopping=document.getElementById("purchases");
+			var items=shopping.getElementsByTagName("*");
+			alert(items.length);
+			//无序列表的li标签总数。id为purchases的ul下面的li标签的总数；
+			var sales=shopping.getElementsByClassName("sale");
+			alert(sales.length);
+		</script>
+	</body>
+</html>
+
+<!--元素节点： Dom的原子就是元素节点；<p>、<h1>、<ul>就是元素节点-->
+<!--文本节点: Don't forget to buy this stuff.  就是文本节点 一般被元素节点包裹-->
+<!--属性节点: title="a gentle reminder" 这是属性节点-->

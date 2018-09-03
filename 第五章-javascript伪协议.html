@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<a href="javascript:popUp('http://www.baidu.com/');">baidu</a><!--javascript伪协议 伪协议调用js代码很不好-->
+		<a href="http://www.baidu.com/" onclick="popUP(this.getAttribute('href'));return false">baidu</a>
+		<script>
+			function popUP(winURL){
+				window.open(winURL,"popUP","width=300,height=480");
+			}
+		</script>
+	</body>
+</html>
